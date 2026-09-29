@@ -1,0 +1,208 @@
+/* Zera as margens padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo: coloque sua foto na mesma pasta com o nome fundo.jpg.
+   O rgba por cima deixa a foto escurecida em roxo para o texto aparecer */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #2b0f47;
+  background-image: linear-gradient(rgba(43, 15, 71, 0.75), rgba(43, 15, 71, 0.75)), url("filme.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ---------- BOTÕES ---------- */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #6a2fa0;
+  border: 2px solid #9b59d0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8a4fc0;
+}
+
+.btn-contorno {
+  background-color: transparent;
+}
+
+/* ---------- MAIN (index.html) ---------- */
+main {
+  flex: 1;
+}
+
+.hero {
+  padding: 100px 40px 60px 40px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 500px;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.hero small {
+  display: block;
+  margin-top: 15px;
+}
+
+.vantagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+}
+
+.cartao {
+  width: 240px;
+  padding-left: 15px;
+  border-left: 3px solid #9b59d0;
+}
+
+.cartao h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.chamada-final {
+  padding: 40px 40px 80px 40px;
+}
+
+.chamada-final h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* ---------- FORMULÁRIO (cadastro.html) ---------- */
+.centro {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  background-color: rgba(43, 15, 71, 0.9);
+  border: 1px solid #6a2fa0;
+  border-radius: 8px;
+}
+
+form h1 {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #421a66;
+  border: 1px solid #6a2fa0;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.foto-perfil label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #9b59d0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#previa,
+.sem-foto {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #9b59d0;
+  margin: 0 auto 12px auto;
+}
+
+#previa {
+  display: block;
+  object-fit: cover;
+}
+
+.sem-foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #421a66;
+}
+
+/* Mensagem de erro ou sucesso */
+.mensagem {
+  margin-top: 12px;
+  min-height: 24px;
+}
+
+.mensagem.erro {
+  color: #ffb4a8;
+}
+
+.mensagem.ok {
+  color: #b8f0b0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Faz o atributo hidden funcionar (esconde a foto ou o "Sem foto") */
+[hidden] {
+  display: none !important;
+}
